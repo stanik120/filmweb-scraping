@@ -36,4 +36,9 @@ object(Scraping\Filmweb)[251]
       1 => string 'USA' (length=3)
   public 'release_date' => string ' 24 marca 1999 (świat) ' (length=24)
 ```
-###
+### Instalacja:
+Najprostszym sposobem na zainstalowanie tej biblioteki jest użycie composera ([getcomposer.org](https://getcomposer.org/)).
+Przejdź do głównego katalogu twojego projektu i wpisz komendę:
+```
+composer require stanik/filmweb-scraping
+```
