@@ -1,17 +1,23 @@
 {
     "name": "stanik/filmweb-scraping",
-    "description": "A simple function that downloads information about a movie from Filmweb.pl",
+    "description": "Prosta biblioteka pobierająca informacje na temat filmu ze strony Filmweb.pl na podstawie tytułu oraz opcjonalnie daty premiery.",
     "type": "library",
+    "keywords": [
+        "filmweb",
+        "film",
+        "scraping"
+    ],
+    "homepage": "https://github.com/stanik120/filmweb-scraping",
     "license": "GPL-3.0",
     "authors": [
         {
             "name": "Stanik",
-            "email": "stanik@tuta.io"
+            "email": "stanik@tuta.io",
+            "homepage": "https://github.com/stanik120/"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-        "php": ">=7.2.19"
+        "php": ">=7.0.0"
     },
     "autoload": {
         "psr-4": {

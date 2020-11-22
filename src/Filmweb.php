@@ -12,6 +12,11 @@ class Filmweb
     var $rate_count;
     var $description;
     var $poster;
+    var $director;
+    var $creator;
+    var $genre;
+    var $production;
+    var $release_date;
 
     function __construct($title, $date = null)
     {
@@ -45,6 +50,43 @@ class Filmweb
         $this->rate_count = $this->between('data-count="', '"', $movie_page);
         $this->description = $this->between('itemprop="description">', '</div>', $movie_page);
         $this->poster = $this->between('id="filmPoster" itemprop="image" content="', '"', $movie_page);
+        $this->release_date = $this->between('<span class="block">', '</span>', $movie_page);
+
+        $directors = $this->between('data-type="directing-info">', '</div>', $movie_page);
+        $director = explode('</a>', $directors);
+        foreach ($director as $dir => $val){
+            $director[$dir] = $this->between('title="', '"', $val);
+            if($director[$dir] != null){
+                $this->director[$dir] = $director[$dir];
+            }
+        }
+
+        $creators = $this->between('data-type="screenwriting-info">', '</div>', $movie_page);
+        $creator = explode('</a>', $creators);
+        foreach ($creator as $cre => $val){
+            $creator[$cre] = $this->between('title="', '"', $val);
+            if($creator[$cre] != null){
+                $this->creator[$cre] = $creator[$cre];
+            }
+        }
+
+        $genres = $this->between('itemprop="genre"><span>', '</div>', $movie_page);
+        $genre = explode('</a>', $genres);
+        foreach ($genre as $gen => $val){
+            $genre[$gen] = $this->between('film/', '/', $val);
+            if($genre[$gen] != null){
+                $this->genre[$gen] = $genre[$gen];
+            }
+        }
+
+        $productions = $this->between('produkcja</div><div class="filmInfo__info"><span><a href="', '</div>', $movie_page);
+        $production = explode('<a href="', $productions);
+        foreach ($production as $pro => $val){
+            $production[$pro] = $this->between('">', '</a>', $val);
+            if($production[$pro] != null){
+                $this->production[$pro] = $production[$pro];
+            }
+        }
 
     }
 

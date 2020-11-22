@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 
+## [0.0.2] - 2020-11-23
+### Added
+- Do tablicy $director funkcja zapisuje reżyserów.
+- Do tablicy $creator funkcja zapisuje scenarzystów.
+- Do tablicy $genre funkcja zapisuje gatunki do jakich należy film.
+- Do tablicy $production funkcja zapisuje kraje które brały udział w produkcji.
+- Do zmiennej $release_date funkcja zapisuje datę premiery;
+### Changed
+- Poprawiłem plik composer.json
+
 ## [0.0.1] - 2020-11-22
 ### Added
 - Na podstawie tytułu oraz opcjonalnie daty premiery filmu funkcja pobiera stronę z opisem filmu i zapisuje ją w zmiennej $movie_page
@@ -20,5 +30,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - $poster - łącze do plakatu
 - Jeżeli film nie zostanie znaleziony funkcja jest zatrzymywana z błędem "Nie można znaleźć filmu"
 
-[Unreleased]: https://github.com/stanik120/filmweb-scraping/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/stanik120/filmweb-scraping/compare/v0.0.2...HEAD
+[0.0.2]: https://github.com/stanik120/filmweb-scraping/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/stanik120/filmweb-scraping/releases/tag/v0.0.1
