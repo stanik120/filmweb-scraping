@@ -1,0 +1,21 @@
+{
+    "name": "stanik/filmweb-scraping",
+    "description": "A simple function that downloads information about a movie from Filmweb.pl",
+    "type": "library",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Stanik",
+            "email": "stanik@tuta.io"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.2.19"
+    },
+    "autoload": {
+        "psr-4": {
+            "Scraping\\": "src/"
+        }
+    }
+}
